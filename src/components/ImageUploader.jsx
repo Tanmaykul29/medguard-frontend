@@ -42,7 +42,7 @@ const ImageUploader = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/upload', {
+            const response = await fetch('https://medguard-backend-dbbvc6apc6fybtcx.centralindia-01.azurewebsites.net/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -132,7 +132,7 @@ const ImageUploader = () => {
                 formData.append('file', capturedFile);
 
                 // Backend request to /upload
-                const response = await fetch('http://127.0.0.1:5000/upload', {
+                const response = await fetch('https://medguard-backend-dbbvc6apc6fybtcx.centralindia-01.azurewebsites.net/upload', {
                     method: 'POST',
                     body: formData,
                 });
